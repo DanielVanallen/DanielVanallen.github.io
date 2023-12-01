@@ -123,6 +123,7 @@ function CreateNavigationBar()
 //parent = none
 function CreateHomePage()
 {
+    console.log("did I make it here?");
     ClearMainDiv();
     var mainDiv = document.getElementById('main-div');
     //creates the main div for the home page
