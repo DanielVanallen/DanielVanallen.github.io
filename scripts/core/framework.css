@@ -4,15 +4,22 @@
 * ------------------------------------------------------------------------
 */
 
-body {
-    margin: 0;
-    font-size: 100%;
+.center-divs{
+    display:flex;
+    justify-content: center;
 }
 
-#background-image{
-    height: 100%;
-    width: 100%;
-    opacity: .5;
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+#main-page{
+    height: auto !important;
+    min-height: 100%;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.75) ), url(../media/MyPageBackground.jpg);
+    background-size: cover;
 }
 
 #head-bar{
@@ -23,24 +30,109 @@ body {
     height: 100px;
 }
 
-#my-name{
-    color: white;
+#title-bar{
     width: 100%;
     height: 60px;
+}
+
+#my-name{
+    padding-top: 5px;
+    color: white;
+    width: 100%;
+    height: 25px;
     margin: auto;
     text-align: center;
-    font-size: 50px;
+    font-size: 25px;
+}
+
+#my-email{
+    padding-top: 5px;
+    color: lightgrey;
+    width: 100%;
+    height: 20px;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
 }
 
 #link-div{
     width: 100%;
     height: 40px;
     margin: auto;
-    display: flex;
-    justify-content: center;
 }
 
 .social-link{
     height: 30px;
-    padding: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    cursor: pointer;
 }
+
+#nav-bar{
+    background-color: black;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    border-top: 3px;
+    border-style: solid;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-color: darkgoldenrod;
+}
+
+.nav-div {
+    color: darkgoldenrod;
+    height: 20px;
+    width: 25%;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    cursor: default;
+}
+.nav-div:hover{
+    color: gold;
+}
+
+.page{
+    padding-top: 200px;
+}
+
+#pic-div{
+    width: 100%;
+
+}
+
+.profile-pics{
+    width: 15%;
+    height: auto;
+    margin: 1%;
+    margin-top: 2%;
+    border-style: hidden;
+    border-radius: 50%;
+}
+
+#about-me{
+    width: 100%;
+}
+
+#me-text{
+    color: darkgoldenrod;
+    width: 50%;
+    text-align: center;
+    font-size: 100%;
+}
+
+.resLink-div {
+    color: darkgoldenrod;
+    height: 15px;
+    padding: 25px;
+    text-align: center;
+    font-size: 15px;
+    cursor: default;
+    cursor: pointer;
+}
+
