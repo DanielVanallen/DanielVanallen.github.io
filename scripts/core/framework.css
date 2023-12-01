@@ -6,6 +6,7 @@
 
 .center-divs{
     display:flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -127,12 +128,56 @@ body {
 }
 
 .resLink-div {
-    color: darkgoldenrod;
+    background-color: darkgoldenrod;
+    color: black;
     height: 15px;
-    padding: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
     text-align: center;
     font-size: 15px;
     cursor: default;
     cursor: pointer;
+    border-radius: 10px;
+}
+
+.resLink-div:hover{
+    background-color: gold;
+}
+
+#skill-title{
+    margin-top: 20px;
+    font-size: 30px;
+    color: darkgoldenrod;
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: auto;
+    text-align: center;
+}
+
+.list-titles{
+    margin-top: 20px;
+    font-size: 20px;
+    color: rgb(167, 122, 8);
+    border-style: solid;
+    border-width: 1px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+}
+
+.skills-list{
+    margin: 2%;
+    text-align: center;
+    width: auto;
+}
+
+.list-format{
+    margin-top: 5px;
+    font-size: 15px;
+    color: rgb(133, 97, 8);
 }
 

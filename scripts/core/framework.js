@@ -110,13 +110,14 @@ function CreateNavigationBar()
 
     var myResumeLink = document.createElement('div');
     myResumeLink.id = "resume-link";
-    myResumeLink.innerHTML = "Resume and Skills";
+    myResumeLink.innerHTML = "Resume/Skills List";
     myResumeLink.classList.add("nav-div");
     navBar.appendChild(myResumeLink);
     myResumeLink.onclick = function(){
         CreateResumePage();
     }
     CreateHomePage();
+    //CreateResumePage();
 }
 
 //This will be the first page that is created all the time.  Navigation will start here
@@ -138,14 +139,6 @@ function CreateHomePage()
     picDiv.id = "pic-div";
     picDiv.classList.add("center-divs");
     homePage.appendChild(picDiv);
-    
-    //creates the professional image of me
-    // var proPic = document.createElement('img');
-    // proPic.id = "pro-pic";
-    // proPic.classList.add("profile-pics");
-    // proPic.src = "scripts/media/Professional_Pic_500.jpg";
-    // proPic.alt = "My Professional Pic";
-    // picDiv.appendChild(proPic);
 
     //Creates the relaxed image of me
     var relPic = document.createElement('img');
@@ -209,4 +202,96 @@ function CreateResumePage()
         window.location.href = "https://drive.google.com/file/d/1vkiU0DtQL20p5QIMVd3xnT988_NLu6-9/view?usp=sharing"
     }
 
+    //Creates skills title div
+    var skillTitleDiv = document.createElement('div');
+    skillTitleDiv.id = "skill-title-div";
+    skillTitleDiv.classList.add('center-divs');
+    resPage.append(skillTitleDiv);
+
+    var skillTitle = document.createElement('div');
+    skillTitle.id = "skill-title";
+    skillTitle.innerHTML = "MY SKILLS"
+    skillTitleDiv.appendChild(skillTitle);
+
+    //creates the skills container
+    var skillContainer = document.createElement("div");
+    skillContainer.id = "skill-container";
+    skillContainer.classList.add('center-divs');
+    resPage.append(skillContainer);
+
+    //PROGRAMING LANGUAGE LISTS
+    //creates programming languages list container
+    var progLangContainer = document.createElement('div');
+    progLangContainer.id = "lang-container";
+    progLangContainer.classList.add('skills-list');
+    skillContainer.append(progLangContainer);
+    //creates programming languages list title div
+    var progTitle = document.createElement('div');
+    progTitle.id = "t-programs";
+    progTitle.classList.add('list-titles');
+    progTitle.innerHTML = "<b>Programing Languages</b>";
+    progLangContainer.append(progTitle);
+    //creates list of programming languages
+    var progList = document.createElement('div');
+    progList.id = 'program-list';
+    progList.classList.add("list-format");
+    progList.innerHTML = "C#<br>C++<br>HTML<br>Javascript<br>CSS";
+    progLangContainer.append(progList);
+
+    //IDE LIST
+    //creates IDE list container
+    var ideContainer = document.createElement('div');
+    ideContainer.id = "ide-container";
+    ideContainer.classList.add('skills-list');
+    skillContainer.append(ideContainer);
+    //creates IDE list title div
+    var ideTitle = document.createElement('div');
+    ideTitle.id = "t-ide";
+    ideTitle.classList.add('list-titles');
+    ideTitle.innerHTML = "<b>Integrated Development Environments (IDE)</b>";
+    ideContainer.append(ideTitle);
+    //creates list of IDE
+    var ideList = document.createElement('div');
+    ideList.id = 'ide-list';
+    ideList.classList.add("list-format");
+    ideList.innerHTML = "Unity<br>Unreal<br>Arduino<br>Raspberry Pi<br>Visual Studio<br>VS code<br>BootStrap";
+    ideContainer.append(ideList);
+
+    //XR TOOLS LIST
+    //creates XR tools list container
+    var xrContainer = document.createElement('div');
+    xrContainer.id = "xr-container";
+    xrContainer.classList.add('skills-list');
+    skillContainer.append(xrContainer);
+    //creates XR tools list title div
+    var xrTitle = document.createElement('div');
+    xrTitle.id = "t-xr";
+    xrTitle.classList.add('list-titles');
+    xrTitle.innerHTML = "<b>Extended Reality (XR) Tools</b>";
+    xrContainer.append(xrTitle);
+    //creates list of XR Tools
+    var xrList = document.createElement('div');
+    xrList.id = 'xr-list';
+    xrList.classList.add("list-format");
+    xrList.innerHTML = "Samsung Odyssey<br>Arduino<br>Raspberry Pi<br>Magic Leap<br>Oculus Rift<br>Leap Motion<br>HTC Vive<br>Meta Quest 2";
+    xrContainer.append(xrList);
+
+    //FABRICATION LIST
+    //creates fabrication list container
+    var fabContainer = document.createElement('div');
+    fabContainer.id = "fab-container";
+    fabContainer.classList.add('skills-list');
+    skillContainer.append(fabContainer);
+    //creates XR tools list title div
+    var fabTitle = document.createElement('div');
+    fabTitle.id = "t-fab";
+    fabTitle.classList.add('list-titles');
+    fabTitle.innerHTML = "<b>Fabrication Skills</b>";
+    fabContainer.append(fabTitle);
+    //creates list of XR Tools
+    var fabList = document.createElement('div');
+    fabList.id = 'fab-list';
+    fabList.classList.add("list-format");
+    fabList.innerHTML = "Solidworks<br>Printed Circuit board (PCB) design<br>3D Printing<br>Arduino<br>PCB Assembly<br>Mechanical Background";
+    fabContainer.append(fabList);
 }
