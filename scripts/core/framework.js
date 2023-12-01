@@ -329,12 +329,12 @@ function CreateResumePage()
     var collabTitle = document.createElement('div');
     collabTitle.id = "t-collab";
     collabTitle.classList.add('list-titles');
-    collabTitle.innerHTML = "<b>Collaboration Tools</b>";
+    collabTitle.innerHTML = "<b>Collaboration/Discrepancy reporting Tools</b>";
     collabContainer.append(collabTitle);
     //creates list of repos
     var collabList = document.createElement('div');
     collabList.id = 'collab-list';
     collabList.classList.add("list-format");
-    collabList.innerHTML = "*Trello<br>Jira";
+    collabList.innerHTML = "*Trello<br>Jira<br>*Bugzilla";
     collabContainer.append(collabList);
 }
