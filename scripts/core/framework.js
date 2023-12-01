@@ -117,7 +117,6 @@ function CreateNavigationBar()
         CreateResumePage();
     }
     CreateHomePage();
-    //CreateResumePage();
 }
 
 //This will be the first page that is created all the time.  Navigation will start here
