@@ -116,8 +116,8 @@ function CreateNavigationBar()
     myResumeLink.onclick = function(){
         CreateResumePage();
     }
-    CreateHomePage();
-    //CreateResumePage();
+    //CreateHomePage();
+    CreateResumePage();
 }
 
 //This will be the first page that is created all the time.  Navigation will start here
@@ -213,6 +213,12 @@ function CreateResumePage()
     skillTitle.innerHTML = "MY SKILLS"
     skillTitleDiv.appendChild(skillTitle);
 
+    //creates the notes div
+    var notesContainer = document.createElement("div");
+    notesContainer.id = "notes-div";
+    notesContainer.innerHTML = "(*) I have professional experience with this.";
+    resPage.append(notesContainer);
+
     //creates the skills container
     var skillContainer = document.createElement("div");
     skillContainer.id = "skill-container";
@@ -235,7 +241,7 @@ function CreateResumePage()
     var progList = document.createElement('div');
     progList.id = 'program-list';
     progList.classList.add("list-format");
-    progList.innerHTML = "C#<br>C++<br>HTML<br>Javascript<br>CSS";
+    progList.innerHTML = "*C#<br>*C++<br>*HTML<br>*Javascript<br>*CSS";
     progLangContainer.append(progList);
 
     //IDE LIST
@@ -254,7 +260,7 @@ function CreateResumePage()
     var ideList = document.createElement('div');
     ideList.id = 'ide-list';
     ideList.classList.add("list-format");
-    ideList.innerHTML = "Unity<br>Unreal<br>Arduino<br>Raspberry Pi<br>Visual Studio<br>VS code<br>BootStrap";
+    ideList.innerHTML = "*Unity<br>Unreal<br>*Arduino<br>*Raspberry Pi<br>*Visual Studio<br>*VS code";
     ideContainer.append(ideList);
 
     //XR TOOLS LIST
@@ -273,7 +279,7 @@ function CreateResumePage()
     var xrList = document.createElement('div');
     xrList.id = 'xr-list';
     xrList.classList.add("list-format");
-    xrList.innerHTML = "Samsung Odyssey<br>Arduino<br>Raspberry Pi<br>Magic Leap<br>Oculus Rift<br>Leap Motion<br>HTC Vive<br>Meta Quest 2";
+    xrList.innerHTML = "Samsung Odyssey<br>*Arduino<br>Raspberry Pi<br>Magic Leap<br>Oculus Rift<br>Leap Motion<br>HTC Vive<br>Meta Quest 2";
     xrContainer.append(xrList);
 
     //FABRICATION LIST
@@ -292,6 +298,44 @@ function CreateResumePage()
     var fabList = document.createElement('div');
     fabList.id = 'fab-list';
     fabList.classList.add("list-format");
-    fabList.innerHTML = "Solidworks<br>Printed Circuit board (PCB) design<br>3D Printing<br>Arduino<br>PCB Assembly<br>Mechanical Background";
+    fabList.innerHTML = "*Solidworks<br>Printed Circuit board (PCB) design<br>*3D Printing<br>*Arduino<br>*PCB Assembly<br>*Mechanical Background";
     fabContainer.append(fabList);
+
+    //REPOSITORY LIST
+    //creates repo list container
+    var repoContainer = document.createElement('div');
+    repoContainer.id = "repo-container";
+    repoContainer.classList.add('skills-list');
+    skillContainer.append(repoContainer);
+    //creates repo list title div
+    var repoTitle = document.createElement('div');
+    repoTitle.id = "t-repo";
+    repoTitle.classList.add('list-titles');
+    repoTitle.innerHTML = "<b>Repositories</b>";
+    repoContainer.append(repoTitle);
+    //creates list of repos
+    var repoList = document.createElement('div');
+    repoList.id = 'repo-list';
+    repoList.classList.add("list-format");
+    repoList.innerHTML = "*GitHub<br>Perforce<br>*Plastic SCM<br>*Sharepoint";
+    repoContainer.append(repoList);
+
+    //COLLABORATION TOOLS LIST
+    //creates collab list container
+    var collabContainer = document.createElement('div');
+    collabContainer.id = "collab-container";
+    collabContainer.classList.add('skills-list');
+    skillContainer.append(collabContainer);
+    //creates collab list title div
+    var collabTitle = document.createElement('div');
+    collabTitle.id = "t-collab";
+    collabTitle.classList.add('list-titles');
+    collabTitle.innerHTML = "<b>Collaboration Tools</b>";
+    collabContainer.append(collabTitle);
+    //creates list of repos
+    var collabList = document.createElement('div');
+    collabList.id = 'collab-list';
+    collabList.classList.add("list-format");
+    collabList.innerHTML = "*Trello<br>Jira";
+    collabContainer.append(collabList);
 }

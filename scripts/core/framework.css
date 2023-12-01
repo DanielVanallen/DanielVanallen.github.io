@@ -157,6 +157,14 @@ body {
     text-align: center;
 }
 
+#notes-div{
+    margin-top: 20px;
+    font-size: 15px;
+    color: darkgoldenrod;
+    width: auto;
+    text-align: center;
+}
+
 .list-titles{
     margin-top: 20px;
     font-size: 20px;
